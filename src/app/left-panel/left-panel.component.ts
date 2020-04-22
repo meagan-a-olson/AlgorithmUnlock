@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { UpgradeServiceService } from '../upgrade-service.service';
+import { UpgradeService } from '../upgrade-service';
 
 @Component({
   selector: 'app-left-panel',
@@ -10,7 +10,7 @@ export class LeftPanelComponent implements OnInit {
 
   currentNumOfBitcoins: number = 0;
   bitcoinsPerSecond: number = 0;
-  constructor(public upgradeService: UpgradeServiceService) { }
+  constructor(public upgradeService: UpgradeService) { }
 
   ngOnInit(): void {
   }

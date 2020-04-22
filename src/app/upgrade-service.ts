@@ -4,7 +4,7 @@ import { Upgrade } from './upgrade';
 @Injectable({
   providedIn: 'root'
 })
-export class UpgradeServiceService {
+export class UpgradeService {
 
   currentBitcoinMultiplier: number = 0;
   currentNumOfBitcoins: number = 0;

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Upgrade } from '../upgrade';
-import { UpgradeServiceService } from '../upgrade-service.service';
+import { UpgradeService } from '../upgrade-service';
 
 @Component({
   selector: 'app-main-panel',
@@ -12,7 +12,7 @@ export class MainPanelComponent implements OnInit {
   // Upgrade properties
   availableUpgrades: Upgrade[] = [];
 
-  constructor(public upgradeService: UpgradeServiceService) { }
+  constructor(public upgradeService: UpgradeService) { }
 
 
 

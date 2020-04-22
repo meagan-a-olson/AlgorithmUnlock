@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
-import { UpgradeServiceService } from './upgrade-service.service';
+import { UpgradeService } from './upgrade-service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  providers: [UpgradeServiceService]
+  providers: [UpgradeService]
 })
 export class AppComponent {
   title = 'AlgorithmUnlock';
 
-  constructor(public upgradeService: UpgradeServiceService) { }
+  constructor(public upgradeService: UpgradeService) { }
 }

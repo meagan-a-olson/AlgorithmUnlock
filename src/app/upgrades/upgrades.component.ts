@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, Output } from '@angular/core';
 import { Upgrade } from '../upgrade';
-import { UpgradeServiceService } from '../upgrade-service.service';
-import { EventEmitter } from '@angular/core';
+import { UpgradeService } from '../upgrade-service';
+
 
 @Component({
   selector: 'app-upgrades',
@@ -12,13 +12,13 @@ export class UpgradesComponent implements OnInit {
 
   @Input() upgrade: Upgrade;
   
-  constructor(public upgradeService: UpgradeServiceService) { }
+  constructor(public upgradeService: UpgradeService) { }
 
   ngOnInit(): void {
   }
 
   onPurchase() {
-    if (this.upgradeService.currentNumOfBitcoins == this.upgrade.price) 
+    if (this.upgradeService.currentNumOfBitcoins >= this.upgrade.price) 
     {
       this.upgradeService.currentBitcoinMultiplier += this.upgrade.multiplier;
       this.upgradeService.currentNumOfBitcoins -= this.upgrade.price;
