@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Upgrade } from '../upgrade';
 import { UpgradeService } from '../upgrade-service';
-import { ComponentService } from '../component.service';
-import { Component_Computer } from '../component';
+import { Hardware } from '../hardware';
+import { HardwareService } from '../hardware.service';
 
 @Component({
   selector: 'app-main-panel',
@@ -13,15 +13,15 @@ export class MainPanelComponent implements OnInit {
 
   // Upgrade properties
   availableUpgrades: Upgrade[] = [];
-  availableComponents: Component_Computer[] = [];
+  availableHardware: Hardware[] = [];
 
-  constructor(public upgradeService: UpgradeService, public componentService: ComponentService) { }
+  constructor(public upgradeService: UpgradeService, public hardwareService: HardwareService) { }
 
 
 
   ngOnInit(): void {
     this.availableUpgrades = this.upgradeService.availableUpgrades;
-    this.availableComponents = this.componentService.availableComponents;
+    this.availableHardware = this.hardwareService.availableHardware;
   }
 
 

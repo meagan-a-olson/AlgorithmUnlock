@@ -6,6 +6,7 @@ import { MainPanelComponent } from './main-panel/main-panel.component';
 import { LeftPanelComponent } from './left-panel/left-panel.component';
 import { UpgradesComponent } from './upgrades/upgrades.component';
 import { ComponentsComponent } from './components/components.component';
+import { HardwareComponent } from './hardware/hardware.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { ComponentsComponent } from './components/components.component';
     MainPanelComponent,
     LeftPanelComponent,
     UpgradesComponent,
-    ComponentsComponent
+    ComponentsComponent,
+    HardwareComponent
   ],
   imports: [
     BrowserModule
