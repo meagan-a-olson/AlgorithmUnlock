@@ -1,5 +1,8 @@
-
 <div class = "jumbotron">
   <h2>Upgrades:</h2>
   <app-upgrades *ngFor = "let upg of availableUpgrades" [upgrade] = "upg"></app-upgrades>
+</div>
+<div class = "jumbotron">
+  <h2>Components:</h2>
+  <app-components *ngFor = "let com of availableComponents" [component] = "com"></app-components>
 </div>

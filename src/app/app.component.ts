@@ -11,4 +11,6 @@ export class AppComponent {
   title = 'AlgorithmUnlock';
 
   constructor(public upgradeService: UpgradeService) { }
+
+  
 }

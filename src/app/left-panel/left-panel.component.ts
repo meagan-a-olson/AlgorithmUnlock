@@ -25,5 +25,9 @@ export class LeftPanelComponent implements OnInit {
     // Method need to after every purchase, but before next click
     this.bitcoinsPerSecond = this.upgradeService.currentBitcoinMultiplier;
   }
-
+  onDebugClick() {
+    this.currentNumOfBitcoins = this.upgradeService.currentNumOfBitcoins;
+    this.currentNumOfBitcoins = this.currentNumOfBitcoins + 1000000000000;
+    this.upgradeService.currentNumOfBitcoins = this.currentNumOfBitcoins;
+  }
 }
