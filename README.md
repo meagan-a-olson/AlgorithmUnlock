@@ -59,8 +59,10 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
     - Run `git merge master`
     - Pop the stash and make absolutely sure every single conflict is resolved. Most of the time, there won't be any, but they cause problems later if left unresolved. 
 
-## To update a branch during the pull request process
-    - Simply go back to that branch, make your changes, and commit again. The pull request will update automatically.
+## During the pull request process
+    - If you want to make changes, go back to that branch, make your changes, and commit again. The pull request will update automatically.
+    - If someone else completes their pull request before you do, get their changes into your branch so you can deal with any merge conflicts then.
+    - Typically, you don't want to complete someone else's pull request, in case they remember a change they want to make or need to merge in another pull request. Approve it and then wait for them to complete it. This is more a general guideline than a strict rule, though.
 
 ## TL;DR
     - Stash your changes when moving from one branch to another
