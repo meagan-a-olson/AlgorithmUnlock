@@ -28,10 +28,11 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 #################### GIT INSTRUCTIONS ####################
 
-    - I use the command shell terminal to do a lot of this: commands will be put into `` and button names into ""
+    - I use the command shell terminal to do a lot of this: commands will be put into ``
+    - For when I do use the version control sidebar: button names into ""
 
 ## To start a new branch:
-    - Run a `git pull` on the master branch to make sure you have the latest updates
+    - Run `git pull` on the master branch to make sure you have the latest updates
     - Run `git checkout -b branchname` to create a new branch.
         (It's best to name your branch something informative. I also add my name- ex. meagan/updateReadme.)
     - Never edit the master branch directly
@@ -70,4 +71,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
     - Never edit master directly; always use pull requests
     - Always get someone else's approval before completing your pull request and merging to master
     - Don't Panic- we can probably fix whatever you did; just shoot me (Meagan) a text and a screenshot
-    - Have Fun
+    - Have fun!
