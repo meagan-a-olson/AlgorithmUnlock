@@ -5,4 +5,5 @@ export interface Hardware {
     price: number;
     defaultProduction: number;
     production: number;
+    totalAmount: number;
 }
