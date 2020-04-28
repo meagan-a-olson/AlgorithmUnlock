@@ -15,7 +15,8 @@ export class HardwareService {
       actualPrice: 10,
       price: 10,
       defaultProduction: 1.5,
-      production: 1.5
+      production: 1.5,
+      totalAmount: 0
     },
     {
       name: "Motherboard",
@@ -23,7 +24,8 @@ export class HardwareService {
       actualPrice: 20,
       price: 20,
       defaultProduction: 1.5,
-      production: 1.5
+      production: 1.5,
+      totalAmount: 0
     },
     {
       name: "Random Access Memory (RAM)",
@@ -32,7 +34,8 @@ export class HardwareService {
       actualPrice: 30,
       price: 30,
       defaultProduction: 1.5,
-      production: 1.5
+      production: 1.5,
+      totalAmount: 0
     }
 
 

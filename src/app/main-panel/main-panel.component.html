@@ -1,9 +1,9 @@
 <div>
-  <span class = "jumbotron" style="float: left; margin-top: 0em; margin-right: 1.5em; margin-left: 1.5em; width: 40%;"> 
+  <span class = "jumbotron" style="float: left; margin-top: 0em; margin-right: 1.5em; margin-left: 1.5em; width: 40%; overflow-y:scroll;"> 
     <h2>Hardware:</h2>
     <app-hardware *ngFor = "let har of availableHardware" [hardware] = "har"></app-hardware>
   </span>
-  <span class = "jumbotron" style="float: left; margin-top: 0em; margin-right: 1.5em; margin-left: 1.5em; width: 25%;">
+  <span class = "jumbotron" style="float: left; margin-top: 0em; margin-right: 1.5em; margin-left: 1.5em; width: 25%; overflow-y:scroll; ">
     <h2>Upgrades:</h2>
     <app-upgrades *ngFor = "let upg of availableUpgrades" [upgrade] = "upg"></app-upgrades>
   </span>

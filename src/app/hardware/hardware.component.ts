@@ -31,6 +31,19 @@ export class HardwareComponent implements OnInit {
       this.upgradeService.currentBitcoinMultiplier += this.hardware.defaultProduction;
       this.upgradeService.currentNumOfBitcoins -= this.hardware.price;
       this.hardwareService.increasePrice(this.hardware.name);
+
+      this.hardware.totalAmount++;
+      if (this.hardware.name == "CPU (Central Processing Unit)") {
+        this.upgradeService.unlockCPUUprades(this.hardware.totalAmount);
+      }
+      if (this.hardware.name == "Motherboard") {
+        this.upgradeService.unlockMotherboardprades(this.hardware.totalAmount);
+      }
+      if (this.hardware.name == "Random Access Memory (RAM)") {
+        this.upgradeService.unlockRAMUprades(this.hardware.totalAmount);
+      }
+   
     }
   }
+
 }
