@@ -5,6 +5,7 @@
   <div class="card-body">
     <h5 class="card-title">{{hardware.price}} Bitcoins</h5>
     <p class="card-text">{{hardware.description}}</p>
+    <p class="card-text">Total Owned: {{hardware.totalAmount}}</p>
     <button href="#" class="btn btn-success" [disabled]="notAvailable" (click) = "onPurchase()">Purchase</button>
   </div>
 </div>
