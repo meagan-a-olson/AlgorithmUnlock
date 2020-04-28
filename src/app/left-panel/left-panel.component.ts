@@ -10,6 +10,9 @@ export class LeftPanelComponent implements OnInit {
 
   currentNumOfBitcoins: number = 0;
   bitcoinsPerSecond: number = 0;
+  allTimeBitcoins: number = 0;
+  bitcoinsbyClicking: number = 0;
+  totalClicks: number = 0;
   constructor(public upgradeService: UpgradeService) { }
 
   ngOnInit(): void {
@@ -38,6 +41,7 @@ export class LeftPanelComponent implements OnInit {
   onClick() {
     // Method needs to run after every purchase, but before next click [Keep in this order]
     this.updateBitcoinNum(1, true);
+    this.totalClicks++;
     }
 
   onDebugClick() {
