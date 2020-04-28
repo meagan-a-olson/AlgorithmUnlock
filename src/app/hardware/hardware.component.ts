@@ -11,10 +11,18 @@ import { UpgradeService } from '../upgrade-service';
 export class HardwareComponent implements OnInit {
 
   @Input() hardware: Hardware;
+  notAvailable : boolean = true;
   
   constructor(public upgradeService: UpgradeService, public hardwareService: HardwareService) { }
 
   ngOnInit(): void {
+    setInterval(() => {
+      if (this.upgradeService.currentNumOfBitcoins >= this.hardware.price) {
+        this.notAvailable = false;
+      } else {
+        this.notAvailable = true;
+      }
+    }, 500);
   }
 
   onPurchase() {
@@ -24,6 +32,5 @@ export class HardwareComponent implements OnInit {
       this.upgradeService.currentNumOfBitcoins -= this.hardware.price;
       this.hardwareService.increasePrice(this.hardware.name);
     }
-    
   }
 }
