@@ -1,7 +1,7 @@
 import { Upgrade } from './app/upgrade';
 import { Component_Computer } from './app/component';
 
-export const UPGRADES: Upgrade[] = [
+export const CLICKUPGRADES: Upgrade[] = [
     {
         name: "SuperClicker",
         description: "Increase your clicks!",
@@ -21,6 +21,69 @@ export const UPGRADES: Upgrade[] = [
         multiplier: 1.5
       }
 ];
+
+export const CPUUPGRADES: Upgrade[] = [
+  {
+    name: "Beginner CPU",
+    description: "Worth about the same as an old potato chip.",
+    price: 20,
+    multiplier: 1.2
+  },
+  {
+    name: "Intermediate CPU",
+    description: "As they say in the movies: Not bad for computing kid.",
+    price: 40,
+    multiplier: 1.4
+  },
+  {
+    name: "Advanced CPU",
+    description: "Shiny, crisp, and has that new car smell.",
+    price: 60,
+    multiplier: 1.6
+  }
+]
+
+export const MOTHERBOARDUPGRADES: Upgrade[] = [
+  {
+    name: "Junk Motherboard",
+    description: "Not exactly a piece of art, but functional.",
+    price: 30,
+    multiplier: 1.3
+  },
+  {
+    name: "Small Motherboard",
+    description: "Look at the small guy run! Adorable.",
+    price: 50,
+    multiplier: 1.5
+  },
+  {
+    name: "Medium Motherboard",
+    description: "Just your Average Joe dodgeba- I mean motherboard.",
+    price: 70,
+    multiplier: 1.7
+  }
+]
+
+export const RAMUPGRADES: Upgrade[] = [
+  {
+    name: "Single Channel RAM",
+    description: "Yet a single ram in a swarm of sheep. A sheep swarm if you may.",
+    price: 50,
+    multiplier: 1.7
+  },
+  {
+    name: "Double Channel RAM",
+    description: "Is it possible to learn this power?",
+    price: 70,
+    multiplier: 1.9
+  },
+  {
+    name: "Quadruple Channel RAM",
+    description: "MORE POWER! MOOOOOOOOORRREEEE!",
+    price: 90,
+    multiplier: 2.1
+  }
+]
 
 export const HARDWARE: Component_Computer[] = [
     {
