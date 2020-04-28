@@ -10,6 +10,7 @@ export class LeftPanelComponent implements OnInit {
 
   currentNumOfBitcoins: number = 0;
   bitcoinsPerSecond: number = 0;
+  bitcoinsPerClick: number = 1;
   allTimeBitcoins: number = 0;
   bitcoinsbyClicking: number = 0;
   totalClicks: number = 0;
@@ -20,6 +21,7 @@ export class LeftPanelComponent implements OnInit {
     setInterval(() => {
       this.updateBitcoinNum(this.bitcoinsPerSecond, true)
       this.bitcoinsPerSecond = this.upgradeService.currentBitcoinMultiplier;
+      this.allTimeBitcoins += this.bitcoinsPerSecond;
     }, 1000)
   }
 
@@ -41,6 +43,8 @@ export class LeftPanelComponent implements OnInit {
   onClick() {
     // Method needs to run after every purchase, but before next click [Keep in this order]
     this.updateBitcoinNum(1, true);
+    this.allTimeBitcoins += this.bitcoinsPerClick;
+    this.bitcoinsbyClicking += this.bitcoinsPerClick;
     this.totalClicks++;
     }
 
