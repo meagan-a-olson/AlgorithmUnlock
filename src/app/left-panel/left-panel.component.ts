@@ -14,6 +14,8 @@ export class LeftPanelComponent implements OnInit {
   allTimeBitcoins: number = 0;
   bitcoinsbyClicking: number = 0;
   totalClicks: number = 0;
+  bitcoinsSpent: number = 0;
+
   constructor(public upgradeService: UpgradeService) { }
 
   ngOnInit(): void {
@@ -22,6 +24,7 @@ export class LeftPanelComponent implements OnInit {
       this.updateBitcoinNum(this.bitcoinsPerSecond, true)
       this.bitcoinsPerSecond = this.upgradeService.currentBitcoinMultiplier;
       this.allTimeBitcoins += this.bitcoinsPerSecond;
+      this.bitcoinsSpent = this.upgradeService.totalBitcoinsSpent;
     }, 1000)
   }
 
