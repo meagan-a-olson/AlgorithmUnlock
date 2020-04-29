@@ -30,6 +30,7 @@ export class HardwareComponent implements OnInit {
     {
       this.upgradeService.currentBitcoinMultiplier += this.hardware.defaultProduction;
       this.upgradeService.currentNumOfBitcoins -= this.hardware.price;
+      this.upgradeService.totalBitcoinsSpent += this.hardware.price;
       this.hardwareService.increasePrice(this.hardware.name);
 
       this.hardware.totalAmount++;

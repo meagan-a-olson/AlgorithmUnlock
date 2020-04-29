@@ -30,6 +30,7 @@ export class UpgradesComponent implements OnInit {
     {
       this.upgradeService.currentBitcoinMultiplier += this.upgrade.multiplier;
       this.upgradeService.currentNumOfBitcoins -= this.upgrade.price;
+      this.upgradeService.totalBitcoinsSpent += this.upgrade.price;
       this.upgradeService.deleteUpgrade(this.upgrade.name);
     }
   }
