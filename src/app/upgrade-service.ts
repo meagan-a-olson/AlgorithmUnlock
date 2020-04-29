@@ -12,7 +12,7 @@ export class UpgradeService {
   indexCPU = 0;
   indexMother = 0;
   indexRAM = 0;
-
+  totalBitcoinsSpent: number = 0;
 
   availableUpgrades: Upgrade[] = [
     {

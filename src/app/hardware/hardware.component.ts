@@ -31,7 +31,7 @@ export class HardwareComponent implements OnInit {
       this.upgradeService.currentBitcoinMultiplier += this.hardware.defaultProduction;
       this.upgradeService.currentNumOfBitcoins -= this.hardware.price;
       this.hardwareService.buyHardware(this.hardware.name);
-      
+
       if (this.hardware.name == "CPU (Central Processing Unit)") {
         this.upgradeService.unlockCPUUprades(this.hardware.totalAmount);
       }
