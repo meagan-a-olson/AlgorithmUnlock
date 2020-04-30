@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Upgrade } from './upgrade';
-import { CPUUPGRADES, MOTHERBOARDUPGRADES, RAMUPGRADES } from 'src/data';
+import { CPUUPGRADES, MOTHERBOARDUPGRADES, INPUTDEVICESUPGRADES, OUTPUTDEVICESUPGRADES, MAINMEMORYUPGRADES, SECMEMORYUPGRADES, GRAPHICSCARDUPGRADES } from 'src/data';
 
 @Injectable({
   providedIn: 'root'
@@ -12,13 +12,18 @@ export class UpgradeService {
   indexCPU = 0;
   indexMother = 0;
   indexRAM = 0;
+  indexInput = 0;
+  indexOutput = 0;
+  indexMainMem = 0;
+  indexSecMem = 0;
+  indexGraphics = 0;
   totalBitcoinsSpent: number = 0;
 
   availableUpgrades: Upgrade[] = [
     {
-      name: "SuperClicker",
-      description: "Increase your clicks!",
-      price: 10,
+      name: "Your First Upgrade!",
+      description: "Here's a small boost to double your clicks!",
+      price: 50,
       multiplier: 1.5
     }
   ]
@@ -34,27 +39,59 @@ export class UpgradeService {
     }
   }
 
-  unlockCPUUprades(totalCPU: number) {
-    if (totalCPU % 10 == 0)
-    {
-      this.availableUpgrades.push(CPUUPGRADES[this.indexCPU]);
-      this.indexCPU++;
-    }
-  }
-
-  unlockMotherboardprades(totalCPU: number) {
-    if (totalCPU % 10 == 0)
+  unlockMotherboardprades(total: number) {
+    if (total % 10 == 0)
     {
       this.availableUpgrades.push(MOTHERBOARDUPGRADES[this.indexMother]);
       this.indexMother++;
     }
   }
 
-  unlockRAMUprades(totalCPU: number) {
-    if (totalCPU % 10 == 0)
+  unlockCPUUprades(total: number) {
+    if (total % 10 == 0)
     {
-      this.availableUpgrades.push(RAMUPGRADES[this.indexRAM]);
-      this.indexRAM++;
+      this.availableUpgrades.push(CPUUPGRADES[this.indexCPU]);
+      this.indexCPU++;
+    }
+  }
+
+  unlockInputUprades(total: number) {
+    if (total % 10 == 0)
+    {
+      this.availableUpgrades.push(INPUTDEVICESUPGRADES[this.indexInput]);
+      this.indexInput++;
+    }
+  }
+
+  unlockOutputUprades(total: number) {
+    if (total % 10 == 0)
+    {
+      this.availableUpgrades.push(OUTPUTDEVICESUPGRADES[this.indexOutput]);
+      this.indexOutput++;
+    }
+  }
+
+  unlockMainMemoryUprades(total: number) {
+    if (total % 10 == 0)
+    {
+      this.availableUpgrades.push(MAINMEMORYUPGRADES[this.indexMainMem]);
+      this.indexMainMem++;
+    }
+  }
+
+  unlockSecMemoryUprades(total: number) {
+    if (total % 10 == 0)
+    {
+      this.availableUpgrades.push(SECMEMORYUPGRADES[this.indexSecMem]);
+      this.indexSecMem++;
+    }
+  }
+
+  unlockGraphicsUprades(total: number) {
+    if (total % 10 == 0)
+    {
+      this.availableUpgrades.push(GRAPHICSCARDUPGRADES[this.indexGraphics]);
+      this.indexGraphics++;
     }
   }
 
