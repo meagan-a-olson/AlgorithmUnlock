@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Upgrade } from './upgrade';
-import { CPUUPGRADES, MOTHERBOARDUPGRADES, RAMUPGRADES } from 'src/data';
+import { CPUUPGRADES, MOTHERBOARDUPGRADES, INPUTDEVICESUPGRADES, OUTPUTDEVICESUPGRADES, MAINMEMORYUPGRADES, SECMEMORYUPGRADES, GRAPHICSCARDUPGRADES } from 'src/data';
 
 @Injectable({
   providedIn: 'root'
@@ -8,18 +8,37 @@ import { CPUUPGRADES, MOTHERBOARDUPGRADES, RAMUPGRADES } from 'src/data';
 export class UpgradeService {
 
   currentBitcoinMultiplier: number = 0;
+  bitcoinsPerClick: number = 1;
   currentNumOfBitcoins: number = 0;
+  totalBitcoinsSpent: number = 0;
+
+  // Keeps track of next upgrade in each list
   indexCPU = 0;
   indexMother = 0;
-  indexRAM = 0;
-  totalBitcoinsSpent: number = 0;
+  indexInput = 0;
+  indexOutput = 0;
+  indexMainMem = 0;
+  indexSecMem = 0;
+  indexGraphics = 0;
+  
+
+  // Establishes # of hardware needed to unlock next upgrade
+  motherNeededTotal = 5;
+  CPUNeededTotal = 5;
+  inputNeededTotal = 5;
+  outputNeededTotal = 5;
+  mainMemNeededTotal = 5;
+  secMemNeededTotal = 5;
+  graphicsNeededTotal = 5;
+
 
   availableUpgrades: Upgrade[] = [
     {
-      name: "SuperClicker",
-      description: "Increase your clicks!",
-      price: 10,
-      multiplier: 1.5
+      name: "Your First Upgrade!",
+      description: "Here's a small boost to double your clicks!",
+      price: 50,
+      multiplier: 2,
+      upgradeType: 1
     }
   ]
 
@@ -34,27 +53,66 @@ export class UpgradeService {
     }
   }
 
-  unlockCPUUprades(totalCPU: number) {
-    if (totalCPU % 10 == 0)
-    {
-      this.availableUpgrades.push(CPUUPGRADES[this.indexCPU]);
-      this.indexCPU++;
-    }
-  }
-
-  unlockMotherboardprades(totalCPU: number) {
-    if (totalCPU % 10 == 0)
+  unlockMotherboardprades(total: number) {
+    if (total >= this.motherNeededTotal)
     {
       this.availableUpgrades.push(MOTHERBOARDUPGRADES[this.indexMother]);
       this.indexMother++;
+      this.motherNeededTotal *= 2;
     }
   }
 
-  unlockRAMUprades(totalCPU: number) {
-    if (totalCPU % 10 == 0)
+  unlockCPUUprades(total: number) {
+    if (total >= this.CPUNeededTotal)
     {
-      this.availableUpgrades.push(RAMUPGRADES[this.indexRAM]);
-      this.indexRAM++;
+        this.availableUpgrades.push(CPUUPGRADES[this.indexCPU]);
+        this.indexCPU++;
+        this.CPUNeededTotal *= 2;  
+    }
+  }
+
+  unlockInputUprades(total: number) {
+    if (total >= this.inputNeededTotal)
+    {
+      this.availableUpgrades.push(INPUTDEVICESUPGRADES[this.indexInput]);
+      this.indexInput++;
+      this.inputNeededTotal *= 2;
+    }
+  }
+
+  unlockOutputUprades(total: number) {
+    if (total >= this.outputNeededTotal)
+    {
+      this.availableUpgrades.push(OUTPUTDEVICESUPGRADES[this.indexOutput]);
+      this.indexOutput++;
+      this.outputNeededTotal *= 2;
+    }
+  }
+
+  unlockMainMemoryUprades(total: number) {
+    if (total >= this.mainMemNeededTotal)
+    {
+      this.availableUpgrades.push(MAINMEMORYUPGRADES[this.indexMainMem]);
+      this.indexMainMem++;
+      this.mainMemNeededTotal *= 2;
+    }
+  }
+
+  unlockSecMemoryUprades(total: number) {
+    if (total >= this.secMemNeededTotal)
+    {
+      this.availableUpgrades.push(SECMEMORYUPGRADES[this.indexSecMem]);
+      this.indexSecMem++;
+      this.secMemNeededTotal *= 2;
+    }
+  }
+
+  unlockGraphicsUprades(total: number) {
+    if (total >= this.graphicsNeededTotal)
+    {
+      this.availableUpgrades.push(GRAPHICSCARDUPGRADES[this.indexGraphics]);
+      this.indexGraphics++;
+      this.graphicsNeededTotal *= 2;
     }
   }
 

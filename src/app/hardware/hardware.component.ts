@@ -41,8 +41,20 @@ export class HardwareComponent implements OnInit {
       if (this.hardware.name == "Motherboard") {
         this.upgradeService.unlockMotherboardprades(this.hardware.totalAmount);
       }
-      if (this.hardware.name == "Random Access Memory (RAM)") {
-        this.upgradeService.unlockRAMUprades(this.hardware.totalAmount);
+      if (this.hardware.name == "Input Devices") {
+        this.upgradeService.unlockInputUprades(this.hardware.totalAmount);
+      }
+      if (this.hardware.name == "Output Devices") {
+        this.upgradeService.unlockOutputUprades(this.hardware.totalAmount);
+      }
+      if (this.hardware.name == "Main Memory") {
+        this.upgradeService.unlockMainMemoryUprades(this.hardware.totalAmount);
+      }
+      if (this.hardware.name == "Secondary Memory") {
+        this.upgradeService.unlockSecMemoryUprades(this.hardware.totalAmount);
+      }
+      if (this.hardware.name == "Graphics Card") {
+        this.upgradeService.unlockGraphicsUprades(this.hardware.totalAmount);
       }
    
     }

@@ -5,6 +5,11 @@
   </span>
   <span class = "jumbotron" style="float: left; margin-top: 0em; margin-right: 1.5em; margin-left: 1.5em; width: 25%; overflow-y:scroll; ">
     <h2>Upgrades:</h2>
+      <div *ngIf = "availableUpgrades.length > 0">
     <app-upgrades *ngFor = "let upg of availableUpgrades" [upgrade] = "upg"></app-upgrades>
+      </div>
+      <div *ngIf = "availableUpgrades.length == 0">
+        <h4 style="text-align: center; margin-top: 3rem;">All available upgrades purchased!</h4>
+      </div>
   </span>
 </div>
