@@ -69,8 +69,7 @@ export class LeftPanelComponent implements OnInit {
     }
 
   onDebugClick() {
-    //1,000,000,000,000,000
-    this.updateBitcoinNum(100000000000000, true);
+    this.updateBitcoinNum(100000000000000000000000, true);
   }
 
 }
