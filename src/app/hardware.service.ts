@@ -83,7 +83,7 @@ export class HardwareService {
       {
         if (this.availableHardware[i].name === name)
         {
-          this.availableHardware[i].actualPrice *= 1.15;
+          this.availableHardware[i].actualPrice *= 1.05;
           this.availableHardware[i].price = Math.ceil(this.availableHardware[i].actualPrice)
           break;        
         }
