@@ -31,11 +31,32 @@ export class UpgradesComponent implements OnInit {
       if (this.upgrade.upgradeType == 1) {
         this.upgradeService.bitcoinsPerClick *= this.upgrade.multiplier;
       }
-      if (this.upgrade.upgradeType == 2) {
+      else if (this.upgrade.upgradeType == 2) {
         // Still need to figure out
       }
-      if (this.upgrade.upgradeType == 3) {
-        this.upgradeService.currentBitcoinMultiplier += this.upgrade.multiplier;
+      else if (this.upgrade.upgradeType == 3) {
+        this.upgradeService.motherMultiplier *= this.upgrade.multiplier;
+      }
+      else if (this.upgrade.upgradeType == 4) {
+        this.upgradeService.CPUMultiplier *= this.upgrade.multiplier;
+      }
+      else if (this.upgrade.upgradeType == 5) {
+        this.upgradeService.inputMultiplier *= this.upgrade.multiplier;
+      }
+      else if (this.upgrade.upgradeType == 6) {
+        this.upgradeService.outputMultiplier *= this.upgrade.multiplier;
+      }
+      else if (this.upgrade.upgradeType == 7) {
+        this.upgradeService.mainMemMultiplier *= this.upgrade.multiplier;
+      }
+      else if (this.upgrade.upgradeType == 8) {
+        this.upgradeService.secMemMultiplier *= this.upgrade.multiplier;
+      }
+      else if (this.upgrade.upgradeType == 9) {
+        this.upgradeService.graphicsMultiplier *= this.upgrade.multiplier;
+      }
+      else {
+        // Should never reach this point
       }
 
       this.upgradeService.currentNumOfBitcoins -= this.upgrade.price;
