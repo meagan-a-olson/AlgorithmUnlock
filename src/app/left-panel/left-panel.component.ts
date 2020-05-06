@@ -22,7 +22,7 @@ export class LeftPanelComponent implements OnInit {
     // Updates both current bitcoin total and bitcoins/s every second. Interval can be changed.
     setInterval(() => {
       this.updateBitcoinNum(this.bitcoinsPerSecond, true)
-      this.bitcoinsPerSecond = this.upgradeService.currentBitcoinMultiplier;
+      this.bitcoinsPerSecond = this.upgradeService.calculateCurrentBitcoinProduction();
       this.bitcoinsPerClick = this.upgradeService.bitcoinsPerClick;
       this.allTimeBitcoins += this.bitcoinsPerSecond;
       this.bitcoinsSpent = this.upgradeService.totalBitcoinsSpent;
