@@ -12,6 +12,8 @@ export class HardwareComponent implements OnInit {
 
   @Input() hardware: Hardware;
   notAvailable : boolean = true;
+  priceDisplay;
+  numOwnedDisplay;
   
   constructor(public upgradeService: UpgradeService, public hardwareService: HardwareService) { }
 
