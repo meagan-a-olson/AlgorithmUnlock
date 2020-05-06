@@ -89,6 +89,26 @@ export class HardwareService {
         }
     }
   }
+  getProduction(name: string) {
+    for (let i = 0; i < this.availableHardware.length; i++)
+      {
+        if (this.availableHardware[i].name === name)
+        {
+         return this.availableHardware[i].production        
+        }
+    }
+    return 0; // should never reach here
+  }
+  getAmount(name: string) {
+    for (let i = 0; i < this.availableHardware.length; i++)
+      {
+        if (this.availableHardware[i].name === name)
+        {
+         return this.availableHardware[i].totalAmount        
+        }
+    }
+    return 0; // should never reach here
+  }
   buyHardware(name: string) {
     for (let i = 0; i < this.availableHardware.length; i++)
       {
@@ -99,5 +119,44 @@ export class HardwareService {
           break;        
         }
     }
+  }
+  checkPriceOf10(name: string) {
+    for (let i = 0; i < this.availableHardware.length; i++)
+      {
+        if (this.availableHardware[i].name === name)
+        {
+          var testActualPrice = this.availableHardware[i].actualPrice;
+          var testPrice = this.availableHardware[i].price;
+          var returnTotal = 0;
+
+          for (let j = 0; j < 10; j++) {
+            testActualPrice *= 1.15;
+            testPrice = Math.ceil(testActualPrice);
+            returnTotal = returnTotal + testPrice;
+          }
+          return returnTotal;        
+        }
+    }
+    return 0; // Should never reach this.
+  }
+
+  checkPriceOf100(name: string) {
+    for (let i = 0; i < this.availableHardware.length; i++)
+      {
+        if (this.availableHardware[i].name === name)
+        {
+          var testActualPrice = this.availableHardware[i].actualPrice;
+          var testPrice = this.availableHardware[i].price;
+          var returnTotal = 0;
+
+          for (let j = 0; j < 100; j++) {
+            testActualPrice *= 1.15;
+            testPrice = Math.ceil(testActualPrice);
+            returnTotal = returnTotal + testPrice;
+          }
+          return returnTotal;        
+        }
+    }
+    return 0; // Should never reach this.
   }
 }
