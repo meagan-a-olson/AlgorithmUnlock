@@ -1,11 +1,10 @@
-
-<div class="card text-white bg-secondary mb-3 text-center">
+<div class="custom-card">
   <div class="card-header">
     {{upgrade.name}}
   </div>
   <div class="card-body">
     <h5 class="card-title">{{upgrade.price}} Bitcoins</h5>
     <p class="card-text">{{upgrade.description}}</p>
-    <button href="#" class="btn btn-success" [disabled]="notAvailable" (click) = "onPurchase()">Purchase</button>
+    <button href="#" class="btn btn-danger" [disabled]="notAvailable" (click) = "onPurchase()">Purchase</button>
   </div>
 </div>

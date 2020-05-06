@@ -1,0 +1,7 @@
+.card {
+    margin-top: 1.5em;
+    background-color:rgb(57, 57, 65); 
+    color: white; 
+    border-color: blue; 
+    border-style: solid;
+}
