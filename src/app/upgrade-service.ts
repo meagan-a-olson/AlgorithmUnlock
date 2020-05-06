@@ -45,7 +45,7 @@ export class UpgradeService {
 
   availableUpgrades: Upgrade[] = [
     {
-      name: "Your First Upgrade!",
+      name: "Starter Pick-Me-Up",
       description: "Here's a small boost to double your clicks!",
       price: 50,
       multiplier: 2,
@@ -69,7 +69,7 @@ export class UpgradeService {
     {
       this.availableUpgrades.push(MOTHERBOARDUPGRADES[this.indexMother]);
       this.indexMother++;
-      this.motherNeededTotal *= 2;
+      this.motherNeededTotal *= 1.745;
     }
   }
 
@@ -78,7 +78,7 @@ export class UpgradeService {
     {
         this.availableUpgrades.push(CPUUPGRADES[this.indexCPU]);
         this.indexCPU++;
-        this.CPUNeededTotal *= 2;  
+        this.CPUNeededTotal *= 1.745;  
     }
   }
 
@@ -87,7 +87,7 @@ export class UpgradeService {
     {
       this.availableUpgrades.push(INPUTDEVICESUPGRADES[this.indexInput]);
       this.indexInput++;
-      this.inputNeededTotal *= 2;
+      this.inputNeededTotal *= 1.745;
     }
   }
 
@@ -96,7 +96,7 @@ export class UpgradeService {
     {
       this.availableUpgrades.push(OUTPUTDEVICESUPGRADES[this.indexOutput]);
       this.indexOutput++;
-      this.outputNeededTotal *= 2;
+      this.outputNeededTotal *= 1.745;
     }
   }
 
@@ -105,7 +105,7 @@ export class UpgradeService {
     {
       this.availableUpgrades.push(MAINMEMORYUPGRADES[this.indexMainMem]);
       this.indexMainMem++;
-      this.mainMemNeededTotal *= 2;
+      this.mainMemNeededTotal *= 1.745;
     }
   }
 
@@ -114,7 +114,7 @@ export class UpgradeService {
     {
       this.availableUpgrades.push(SECMEMORYUPGRADES[this.indexSecMem]);
       this.indexSecMem++;
-      this.secMemNeededTotal *= 2;
+      this.secMemNeededTotal *= 1.745;
     }
   }
 
@@ -123,7 +123,7 @@ export class UpgradeService {
     {
       this.availableUpgrades.push(GRAPHICSCARDUPGRADES[this.indexGraphics]);
       this.indexGraphics++;
-      this.graphicsNeededTotal *= 2;
+      this.graphicsNeededTotal *= 1.745;
     }
   }
 
