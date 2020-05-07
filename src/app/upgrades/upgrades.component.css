@@ -1,2 +1,11 @@
-
+.custom-card {
+    background-color: rgb(67, 67, 245);
+    color: white;
+    margin-bottom: 1rem;
+    text-align: center;
+    border-radius: 2%;
+}
+.card-header {
+    font-size: large;
+}
 
