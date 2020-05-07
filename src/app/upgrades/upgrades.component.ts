@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, Output } from '@angular/core';
 import { Upgrade } from '../upgrade';
 import { UpgradeService } from '../upgrade-service';
+import { NumberFormatService } from './../number-format.service';
 
 
 @Component({
@@ -12,10 +13,12 @@ export class UpgradesComponent implements OnInit {
 
   @Input() upgrade: Upgrade;
   notAvailable : boolean = true;
+  priceDisplay : string = '';
   
-  constructor(public upgradeService: UpgradeService) { }
+  constructor(public upgradeService: UpgradeService, public numService : NumberFormatService) { }
 
   ngOnInit(): void {
+    this.priceDisplay = this.numService.formatNumber(this.upgrade.price);
     setInterval(() => {
       if (this.upgradeService.currentNumOfBitcoins >= this.upgrade.price) {
         this.notAvailable = false;

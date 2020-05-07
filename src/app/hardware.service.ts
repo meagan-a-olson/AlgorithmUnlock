@@ -130,7 +130,7 @@ export class HardwareService {
           var returnTotal = 0;
 
           for (let j = 0; j < 10; j++) {
-            testActualPrice *= 1.15;
+            testActualPrice *= 1.05;
             testPrice = Math.ceil(testActualPrice);
             returnTotal = returnTotal + testPrice;
           }
@@ -150,7 +150,7 @@ export class HardwareService {
           var returnTotal = 0;
 
           for (let j = 0; j < 100; j++) {
-            testActualPrice *= 1.15;
+            testActualPrice *= 1.05;
             testPrice = Math.ceil(testActualPrice);
             returnTotal = returnTotal + testPrice;
           }

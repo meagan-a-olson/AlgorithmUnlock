@@ -3,7 +3,7 @@
     {{upgrade.name}}
   </div>
   <div class="card-body">
-    <h5 class="card-title">{{upgrade.price}} Bitcoins</h5>
+    <h5 class="card-title">{{priceDisplay}} Bitcoins</h5>
     <p class="card-text">{{upgrade.description}}</p>
     <button href="#" class="btn btn-success" [disabled]="notAvailable" (click) = "onPurchase()">Purchase</button>
   </div>

@@ -1,15 +1,15 @@
 <div class="card">
     <div class="card-header">
       <h1 class="text-center">Hyper-Speed Processing Co.</h1>
-      <h3 class="text-center">{{currentNumOfBitcoins}} Bitcoins</h3>
-      <h5 class="text-center">Bitcoins Per Second: {{bitcoinsPerSecond}}</h5>
+      <h3 class="text-center">{{bitcoinDisplay}} Bitcoins</h3>
+      <h5 class="text-center">Bitcoins Per Second: {{bitcoinPerSecondDisplay}}</h5>
     </div>
     <div>
       <div class="container">
         <div class="col text-center">
           <button class="w-75 h-75" style="width: 300px; height: 300px; background-color: rgb(207,181,59); border: none; margin-top: 1.5em; margin-bottom: 1.5em;" (click)="onClick()">Click me</button>
         </div>
-          <button (click)="onDebugClick()">Debug Button (add 1 trillion bitcoin)</button>
+          <button (click)="onDebugClick()">Debug Button (add 100 trillion bitcoin)</button>
       </div>
     </div>
   </div>
@@ -24,10 +24,10 @@
       <div class="card card-body">
         <h4>Algorithim Unlock Statistics:</h4>
         
-        All-Time Bitcoin Produced: {{allTimeBitcoins}}<br>
-        Bitcoin Produced By Clicks: {{bitcoinsbyClicking}}<br>
-        Total Number of Clicks: {{totalClicks}}<br>
-        Total Bitcon's Spent: {{bitcoinsSpent}}
+        All-Time Bitcoins Produced: {{allTimeBitcoinsDisplay}}<br>
+        Bitcoins Produced By Clicks: {{bitcoinsByClickingDisplay}}<br>
+        Total Number of Clicks: {{totalClicksDisplay}}<br>
+        Total Bitcoins Spent: {{bitcoinsSpentDisplay}}
       </div>
     </div>
   </div>

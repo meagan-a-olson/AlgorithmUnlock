@@ -3,12 +3,12 @@
     {{hardware.name}}
   </div>
   <div class="card-body">
-      <img src="assets/images/{{hardware.name}}.png" alt="">
-    <h5 class="card-title">{{hardware.price}} Bitcoins</h5>
+    <img src="assets/images/{{hardware.name}}.png" alt="">
+    <h5 class="card-title">{{priceDisplay}} Bitcoins</h5>
     <p class="card-text">{{hardware.description}}</p>
-    <p class="card-text">Total Owned: {{hardware.totalAmount}}</p>
-    <button href="#" class="btn btn-success" title="Cost={{hardware.price}} Bitcoins" [disabled]="notAvailable1" (click) = "onPurchase()">Purchase 1</button>
-    <button href="#" class="btn btn-success" title="Cost={{getPriceOf10()}} Bitcoins" [disabled]="notAvailable10" (click) = "purchase10()">Purchase 10</button>
-    <button href="#" class="btn btn-success" title="Cost={{getPriceOf100()}} Bitcoins" [disabled]="notAvailable100" (click) = "purchase100()">Purchase 100</button>
+    <p class="card-text">Total Owned: {{numOwnedDisplay}}</p>
+    <button href="#" class="btn btn-success" title="Cost={{priceDisplay}} Bitcoins" [disabled]="notAvailable1" (click) = "onPurchase()">Purchase 1</button>
+    <button href="#" class="btn btn-success" title="Cost={{getPriceOf10(true)}} Bitcoins" [disabled]="notAvailable10" (click) = "purchase10()">Purchase 10</button>
+    <button href="#" class="btn btn-success" title="Cost={{getPriceOf100(true)}} Bitcoins" [disabled]="notAvailable100" (click) = "purchase100()">Purchase 100</button>
   </div>
 </div>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UpgradeService } from './../upgrade-service';
+import { NumberFormatService } from './../number-format.service';
 
 @Component({
   selector: 'app-left-panel',
@@ -16,17 +17,31 @@ export class LeftPanelComponent implements OnInit {
   totalClicks: number = 0;
   bitcoinsSpent: number = 0;
 
-  constructor(public upgradeService: UpgradeService) { }
+  bitcoinDisplay: string = '';
+  bitcoinPerSecondDisplay: string = '';
+  bitcoinsPerClickDisplay: string = '';
+  allTimeBitcoinsDisplay: string = '';
+  bitcoinsByClickingDisplay: string = '';
+  bitcoinsSpentDisplay: string = '';
+  totalClicksDisplay: string = '';
+
+  constructor(public upgradeService: UpgradeService, public numService: NumberFormatService) { }
 
   ngOnInit(): void {
     // Updates both current bitcoin total and bitcoins/s every second. Interval can be changed.
     setInterval(() => {
-      this.updateBitcoinNum(this.bitcoinsPerSecond, true)
+      this.updateBitcoinNum((this.bitcoinsPerSecond / 10), true);
       this.bitcoinsPerSecond = this.upgradeService.calculateCurrentBitcoinProduction();
       this.bitcoinsPerClick = this.upgradeService.bitcoinsPerClick;
-      this.allTimeBitcoins += this.bitcoinsPerSecond;
+      this.allTimeBitcoins += (this.bitcoinsPerSecond / 10);
       this.bitcoinsSpent = this.upgradeService.totalBitcoinsSpent;
-    }, 1000)
+
+      this.bitcoinDisplay = this.numService.formatNumber(this.currentNumOfBitcoins);
+      this.bitcoinPerSecondDisplay = this.numService.formatNumber(this.bitcoinsPerSecond, true);
+      this.bitcoinsPerClickDisplay = this.numService.formatNumber(this.bitcoinsPerClick);
+      this.allTimeBitcoinsDisplay = this.numService.formatNumber(this.allTimeBitcoins);
+      this.bitcoinsSpentDisplay = this.numService.formatNumber(this.bitcoinsSpent);
+    }, 100);
   }
 
   /**
@@ -48,11 +63,13 @@ export class LeftPanelComponent implements OnInit {
     this.updateBitcoinNum(this.bitcoinsPerClick, true);
     this.allTimeBitcoins += this.bitcoinsPerClick;
     this.bitcoinsbyClicking += this.bitcoinsPerClick;
+    this.bitcoinsByClickingDisplay = this.numService.formatNumber(this.bitcoinsbyClicking);
     this.totalClicks++;
+    this.totalClicksDisplay = this.numService.formatNumber(this.totalClicks);
     }
 
   onDebugClick() {
-    this.updateBitcoinNum(100000000000000000000000, true);
+    this.updateBitcoinNum(100000000000000000000, true);
   }
 
 }
