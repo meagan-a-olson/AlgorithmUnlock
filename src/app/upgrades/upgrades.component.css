@@ -1,11 +1,68 @@
 .custom-card {
-    background-color: rgb(67, 67, 245);
+    background-color: #333333;
     color: white;
-    margin-bottom: 1rem;
+    margin: 0.75rem;
     text-align: center;
-    border-radius: 2%;
-}
-.card-header {
-    font-size: large;
+    border: solid aqua 2px;
+    border-radius: 5px;
+    font-family: 'Roboto Slab', serif;
 }
 
+.card-header {
+    font-size: 16px;
+    font-family: 'Press Start 2P'
+}
+
+/* button styling from https://codepen.io/yourpalnurav/pen/LqNmzL */
+.custom-btn {
+    position: relative;
+    background: none;
+    color: aqua;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 0.2em solid aqua;
+    padding: 0.5em 1em;
+    margin: 0.25em;
+}
+
+.custom-btn::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 10%;
+    background:#333333;
+    height: 0.3em;
+    left: 20%;
+    bottom: -0.25em;
+    transform: skewX(45deg);
+    -webkit-transition: all 0.45 cubic-bezier(0.86, 0, 0.07, 1);
+    transition: all 0.45s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.custom-btn:enabled:hover::before {
+    right: 80%;
+}
+
+.custom-btn:enabled:hover::after {
+    left: 80%;
+}
+
+.custom-btn::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 10%;
+    background: #333333;
+    height: 0.3em;
+    right: 20%;
+    top: -0.21em;
+    transform: skewX(-45deg);
+    -webkit-transition: all 0.45s cubic-bezier(0.86, 0, 0.07, 1);
+    transition: all 0.45s cubic-bezier(0.86, 0, 0.07, 1);
+} 
+
+.custom-btn:disabled {
+    border-color: lightgray;
+    color: lightgray;
+    transform: none;
+}

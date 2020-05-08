@@ -1,7 +1,24 @@
 <nav class="navbar navbar-dark bg-dark">
-    <a class="navbar-brand">Algorithm Unlock</a>
-  </nav>
-<app-left-panel class="col-3" style="float: left;"></app-left-panel>
-<app-main-panel class="col-8" style="float: none;"></app-main-panel>
-
-
+  <a class="navbar-brand">Algorithm Unlock</a>
+</nav>
+<div class="page-container">
+  <span class = "jumbotron">
+    <h2>Bitcoin Production</h2>
+    <app-left-panel></app-left-panel>
+  </span>
+  
+  <span class = "jumbotron scroll jumbotron-wide"> 
+    <h2>Hardware</h2>
+    <app-hardware *ngFor = "let har of availableHardware" [hardware] = "har"></app-hardware>
+  </span>
+  
+  <span class = "jumbotron scroll">
+    <h2>Upgrades</h2>
+      <div  *ngIf = "availableUpgrades.length > 0">
+        <app-upgrades *ngFor = "let upg of availableUpgrades" [upgrade] = "upg"></app-upgrades>
+      </div>
+      <div *ngIf = "availableUpgrades.length == 0">
+        <h4>All available upgrades purchased!</h4>
+      </div>
+  </span>
+</div>

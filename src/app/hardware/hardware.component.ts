@@ -41,7 +41,7 @@ export class HardwareComponent implements OnInit {
       } else {
         this.notAvailable100 = true;
       }
-    }, 500);
+    }, 250);
   }
 
   onPurchase() {
