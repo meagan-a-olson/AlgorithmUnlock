@@ -20,7 +20,7 @@ export class HardwareService {
     },
     {
       name: "CPU (Central Processing Unit)",
-      description: "The CPU is the primary component responcible for running instructions. Each computer must have a CPU chip to function.",
+      description: "The CPU is the primary component responsible for running instructions. Each computer must have a CPU chip to function.",
       actualPrice: 100,
       price: 100,
       defaultProduction: 2,
@@ -29,8 +29,8 @@ export class HardwareService {
     },
     {
       name: "Input Devices",
-      description: "Every user needs to interact with a computer, and proper input devices, such as a mouse and keyboard, are essential tools. "
-       + "These devices send data to the computer which allows you to adequately interact with it. With these, you are under Ctrl.",
+      description: "Every user needs to interact with a computer, so proper input devices, such as a mouse and keyboard, are essential tools. "
+       + "These devices send data to the computer, which allows you to interact with it. With these, you are in Ctrl.",
       actualPrice: 400,
       price: 400,
       defaultProduction: 10,
@@ -60,7 +60,7 @@ export class HardwareService {
     {
       name: "Secondary Memory",
       description: "Secondary Memory, also known as external memory, comes in many forms, such as HDD and SSD."
-        + " Secondary memory is non-volitile, so it can hold onto its data with or without a power source. Your computer needs this to store your data in the long term!",
+        + " Secondary memory is non-volatile, so it can hold onto data with or without a power source. Your computer needs this to store your data in the long term!",
       actualPrice: 5000,
       price: 5000,
       defaultProduction: 100,
