@@ -18,14 +18,14 @@ export const MOTHERBOARDUPGRADES: Upgrade[] = [
   },
   {
     name: "Noteworthy-Tier Motherboard",
-    description: "Hope your taking notes on how to be this good.",
+    description: "Hope you're taking notes on how to be this good.",
     price: 60,
     multiplier: 1.3,
     upgradeType: 3
   },
   {
     name: "Remarkable-Tier Motherboard",
-    description: "and you are NOT, the fatherboard!",
+    description: "...and you are NOT- the fatherboard!",
     price: 150,
     multiplier: 1.4,
     upgradeType: 3
@@ -39,35 +39,35 @@ export const MOTHERBOARDUPGRADES: Upgrade[] = [
   },
   {
     name: "Exceptional-Tier Motherboard",
-    description: "",
+    description: "Maybe it'll take you to the mothership.",
     price: 15000,
     multiplier: 1.6,
     upgradeType: 3
   },
   {
     name: "Elite-Tier Motherboard",
-    description: "",
+    description: "...but we do not grant you the rank of Master.",
     price: 2500000,
     multiplier: 1.7,
     upgradeType: 3
   },
   {
     name: "Epic-Tier Motherboard",
-    description: "",
+    description: "Duuuuuuuude. Epic.",
     price: 18000000000,
     multiplier: 1.8,
     upgradeType: 3
   },
   {
     name: "Legendary-Tier Motherboard",
-    description: "",
+    description: "Wait for it.",
     price: 1000000000000000, // Restricted
     multiplier: 1.9,
     upgradeType: 3
   },
   {
     name: "Godly-Tier Motherboard",
-    description: "",
+    description: "Amen.",
     price: 1000000000000000, // Restricted
     multiplier: 2,
     upgradeType: 3
@@ -98,7 +98,7 @@ export const CPUUPGRADES: Upgrade[] = [
   },
   {
     name: "Average-Speed CPU",
-    description: "Lead sponsor for the Average-Joe's Dodgeball team - and yes, its capable of dodging a wrench.",
+    description: "Lead sponsor for the Average-Joe's Dodgeball team - and yes, it's capable of dodging a wrench.",
     price: 1000,
     multiplier: 1.5,
     upgradeType: 4
@@ -126,7 +126,7 @@ export const CPUUPGRADES: Upgrade[] = [
   },
   {
     name: "Prodigious-Speed CPU",
-    description: "The CPU equivalent to a cheetah.",
+    description: "It's all about the Pentiums, baby.",
     price: 128000000000,
     multiplier: 1.9,
     upgradeType: 4
@@ -185,7 +185,7 @@ export const INPUTDEVICESUPGRADES: Upgrade[] = [
       },
       {
         name: "Digital WebCam",
-        description: "Provides moral support from your local FBI Agents.",
+        description: "Provides moral support from your local FBI agents.",
         price: 400000,
         multiplier: 1.8,
         upgradeType: 5
@@ -207,7 +207,7 @@ export const INPUTDEVICESUPGRADES: Upgrade[] = [
       },
       {
         name: "Illuminated Keyboard",
-        description: "Rainbow LED's? check. Wireless? check. Sick design? check+10.",
+        description: "Rainbow LED's? Check. Wireless? Check. Sick design? Check+10.",
         price: 1000000000000000, // Restricted
         multiplier: 2.1,
         upgradeType: 5
@@ -224,7 +224,7 @@ export const INPUTDEVICESUPGRADES: Upgrade[] = [
 export const OUTPUTDEVICESUPGRADES: Upgrade[] = [
   {
     name: "Box Monitor",
-    description: "AKA: The Beast.",
+    description: "AKA The Beast.",
     price: 1170,
     multiplier: 1.4,
     upgradeType: 6
@@ -259,21 +259,21 @@ export const OUTPUTDEVICESUPGRADES: Upgrade[] = [
   },
   {
     name: "Large Flatscreen Monitor",
-    description: "High defintion quality with a hint of overkill.",
+    description: "High definition quality with a hint of overkill.",
     price: 750000,
     multiplier: 1.9,
     upgradeType: 6
   },
   {
     name: "Wireless Printer",
-    description: "Now printing in color! and without wires.",
+    description: "Now printing in color! (And without wires.)",
     price: 125000000,
     multiplier: 2,
     upgradeType: 6
   },
   {
     name: "Guitar Amp Speakers",
-    description: "This computer is ready to Rock n Roll! But you'll have to play Base.",
+    description: "This computer is ready to Rock 'n' Roll! But you'll have to play bass.",
     price: 960000000000,
     multiplier: 2.1,
     upgradeType: 6
@@ -287,7 +287,7 @@ export const OUTPUTDEVICESUPGRADES: Upgrade[] = [
   },
   {
     name: "Jumbotron Monitor",
-    description: "Pairs perfect with a Jumbo Preztal and a hotdog.",
+    description: "Pairs perfect with a Jumbo Preztel and a hotdog.",
     price: 1000000000000000, // Restricted
     multiplier: 2.3,
     upgradeType: 6
@@ -297,14 +297,14 @@ export const OUTPUTDEVICESUPGRADES: Upgrade[] = [
 export const MAINMEMORYUPGRADES: Upgrade[] = [
   {
     name: "Single Channel RAM",
-    description: "Yet a single ram in a swarm of sheep. A sheep swarm if you may.",
+    description: "But a single ram in a swarm of sheep. A sheep swarm, if you may.",
     price: 3105,
     multiplier: 1.5,
     upgradeType: 7
   },
   {
     name: "Double Channel RAM",
-    description: "This is getting out of hand! Now there's two of them!",
+    description: "This is getting out of hand! Now there are two of them!",
     price: 4400,
     multiplier: 1.6,
     upgradeType: 7
@@ -332,21 +332,21 @@ export const MAINMEMORYUPGRADES: Upgrade[] = [
   },
   {
     name: "Self-Producing RAM",
-    description: "Truly a day that will go down in history, infinite RAM at our fingertips!",
+    description: "Truly a day that will go down in history. Infinite RAM at our fingertips!",
     price: 2000000,
     multiplier: 2,
     upgradeType: 7
   },
   {
     name: "Entrepreneur RAM",
-    description: "Wait what? It seems the RAM went about creating an entire business centered around creating more RAM, this can't end well.",
+    description: "Wait, what? It seems the RAM went about creating an entire business to create more RAM. This can't end well.",
     price: 335000000,
     multiplier: 2.1,
     upgradeType: 7
   },
   {
     name: "President RAM",
-    description: ". . . Um.. Well now the entire military has been put forth to create more RAM, so success?",
+    description: "... Um... Well, now the entire military has been put forth to create more RAM, so success?",
     price: 2000000000000,
     multiplier: 2.2,
     upgradeType: 7
@@ -370,7 +370,7 @@ export const MAINMEMORYUPGRADES: Upgrade[] = [
 export const SECMEMORYUPGRADES: Upgrade[] = [
   {
     name: "Tiny External Storage",
-    description: "Aww look the little guy! Adorable.",
+    description: "Aww, look the little guy! Adorable.",
     price: 7800,
     multiplier: 1.6,
     upgradeType: 8
@@ -405,20 +405,20 @@ export const SECMEMORYUPGRADES: Upgrade[] = [
   },
   {
     name: "Massive-Sized External Storage",
-    description: "Large in quanity, and has a rockin personality.",
+    description: "Large in quantity, and has a rockin' personality.",
     price: 5000000,
     multiplier: 2.1,
     upgradeType: 8
   },
   {
     name: "Titanic-Sized External Storage",
-    description: "The world’s best cloud storage service was released today, called Titanic. It’s always synching",
+    description: "The world’s best cloud storage service was released today, called Titanic. It’s always syncing",
     price: 850000000,
     multiplier: 2.2,
     upgradeType: 8
   },
   {
-    name: "Colossal-Sized External Stroage",
+    name: "Colossal-Sized External Storage",
     description: "Finally, something capable of storing the entire Avatar movie.",
     price: 6000000000000,
     multiplier: 2.3,
@@ -426,7 +426,7 @@ export const SECMEMORYUPGRADES: Upgrade[] = [
   },
   {
     name: "Galactus-Sized External Storage",
-    description: "Now this is an Avengers level threat!",
+    description: "Now, this is an Avengers-level threat!",
     price: 1000000000000000, // Restricted
     multiplier: 2.4,
     upgradeType: 8
@@ -451,14 +451,14 @@ export const GRAPHICSCARDUPGRADES: Upgrade[] = [
   },
   {
     name: "16-Bit Graphics",
-    description: "Still somwhat of a Link to the Past, but twice its predecessor.",
+    description: "Still something of a Link to the Past, but twice its predecessor.",
     price: 22000,
     multiplier: 1.8,
     upgradeType: 9
   },
   {
     name: "32-Bit Graphics",
-    description: "A Far Cry from its potential, but your in for a Bioshock in the future.",
+    description: "A Far Cry from its potential, but you're in for a Bioshock in the future.",
     price: 38000,
     multiplier: 1.9,
     upgradeType: 9
@@ -472,14 +472,14 @@ export const GRAPHICSCARDUPGRADES: Upgrade[] = [
   },
   {
     name: "HD Graphics",
-    description: "Finally, I can watch Weird Al in high definition!",
+    description: "Finally, I can watch Star Wars in high definition!",
     price: 521000,
     multiplier: 2.1,
     upgradeType: 9
   },
   {
     name: "1080p-Level Graphics",
-    description: "I'll ace any trivia quiz you bring on, I'm fluent in JavaScript as well as Klingon.",
+    description: "Almost... there...",
     price: 10000000,
     multiplier: 2.2,
     upgradeType: 9
@@ -512,6 +512,4 @@ export const GRAPHICSCARDUPGRADES: Upgrade[] = [
     multiplier: 2.6,
     upgradeType: 9
   },
-
 ]
-
