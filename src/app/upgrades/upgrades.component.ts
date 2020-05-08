@@ -34,9 +34,6 @@ export class UpgradesComponent implements OnInit {
       if (this.upgrade.upgradeType == 1) {
         this.upgradeService.bitcoinsPerClick *= this.upgrade.multiplier;
       }
-      else if (this.upgrade.upgradeType == 2) {
-        // Still need to figure out
-      }
       else if (this.upgrade.upgradeType == 3) {
         this.upgradeService.motherMultiplier *= this.upgrade.multiplier;
       }
@@ -61,6 +58,13 @@ export class UpgradesComponent implements OnInit {
       else {
         // Should never reach this point
       }
+
+      // Check for game won
+      if (this.upgradeService.indexMother > 9 && this.upgradeService.indexCPU > 9 && this.upgradeService.indexInput > 9 && this.upgradeService.indexOutput > 9
+        && this.upgradeService.indexMainMem > 9 && this.upgradeService.indexSecMem > 9 && this.upgradeService.indexGraphics > 9  && this.upgradeService.availableUpgrades.length == 1) 
+        {
+          this.upgradeService.gameWon = true;
+        }
 
       this.upgradeService.currentNumOfBitcoins -= this.upgrade.price;
       this.upgradeService.totalBitcoinsSpent += this.upgrade.price;

@@ -23,6 +23,7 @@ export class UpgradeService {
   indexMainMem = 0;
   indexSecMem = 0;
   indexGraphics = 0;
+  gameWon: boolean = false;
   
 
   // Establishes # of hardware needed to unlock next upgrade
@@ -65,7 +66,7 @@ export class UpgradeService {
   }
 
   unlockMotherboardprades(total: number) {
-    if (total >= this.motherNeededTotal)
+    if (total >= this.motherNeededTotal && this.indexMother < 10)
     {
       this.availableUpgrades.push(MOTHERBOARDUPGRADES[this.indexMother]);
       this.indexMother++;
@@ -74,7 +75,7 @@ export class UpgradeService {
   }
 
   unlockCPUUprades(total: number) {
-    if (total >= this.CPUNeededTotal)
+    if (total >= this.CPUNeededTotal && this.indexCPU < 10)
     {
         this.availableUpgrades.push(CPUUPGRADES[this.indexCPU]);
         this.indexCPU++;
@@ -83,7 +84,7 @@ export class UpgradeService {
   }
 
   unlockInputUprades(total: number) {
-    if (total >= this.inputNeededTotal)
+    if (total >= this.inputNeededTotal && this.indexInput < 10)
     {
       this.availableUpgrades.push(INPUTDEVICESUPGRADES[this.indexInput]);
       this.indexInput++;
@@ -92,7 +93,7 @@ export class UpgradeService {
   }
 
   unlockOutputUprades(total: number) {
-    if (total >= this.outputNeededTotal)
+    if (total >= this.outputNeededTotal && this.indexOutput < 10)
     {
       this.availableUpgrades.push(OUTPUTDEVICESUPGRADES[this.indexOutput]);
       this.indexOutput++;
@@ -101,7 +102,7 @@ export class UpgradeService {
   }
 
   unlockMainMemoryUprades(total: number) {
-    if (total >= this.mainMemNeededTotal)
+    if (total >= this.mainMemNeededTotal && this.indexMainMem < 10)
     {
       this.availableUpgrades.push(MAINMEMORYUPGRADES[this.indexMainMem]);
       this.indexMainMem++;
@@ -110,7 +111,7 @@ export class UpgradeService {
   }
 
   unlockSecMemoryUprades(total: number) {
-    if (total >= this.secMemNeededTotal)
+    if (total >= this.secMemNeededTotal && this.indexSecMem < 10)
     {
       this.availableUpgrades.push(SECMEMORYUPGRADES[this.indexSecMem]);
       this.indexSecMem++;
@@ -119,7 +120,7 @@ export class UpgradeService {
   }
 
   unlockGraphicsUprades(total: number) {
-    if (total >= this.graphicsNeededTotal)
+    if (total >= this.graphicsNeededTotal && this.indexGraphics < 10)
     {
       this.availableUpgrades.push(GRAPHICSCARDUPGRADES[this.indexGraphics]);
       this.indexGraphics++;

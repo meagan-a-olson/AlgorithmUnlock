@@ -17,8 +17,6 @@
       <div  *ngIf = "availableUpgrades.length > 0">
         <app-upgrades *ngFor = "let upg of availableUpgrades" [upgrade] = "upg"></app-upgrades>
       </div>
-      <div *ngIf = "availableUpgrades.length == 0">
-        <h4>All available upgrades purchased!</h4>
-      </div>
+        <h4>{{messageToDisplay}}</h4>
   </span>
 </div>
