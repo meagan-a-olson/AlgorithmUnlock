@@ -1,7 +1,99 @@
-.card {
-    margin-top: 1.5em;
-    background-color:rgb(57, 57, 65); 
-    color: white; 
-    border-color: blue; 
-    border-style: solid;
+.custom-card {
+    background-color: #333333;
+    color: white;
+    text-align: center;
+    border: solid aqua 2px;
+    border-radius: 5px;
+    font-family: 'Roboto Slab', serif;
+    /* margin: 16px; */
 }
+
+.card-header {
+    font-size: 16px;
+    font-family: 'Press Start 2P'
+}
+
+h1 {
+    font-size: 16px;
+}
+
+h2 {
+    text-align: center;
+    margin: 1rem;
+    color: white;
+    opacity: 100%;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 24px;
+}
+
+h3 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 20px;
+}
+
+h5 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 16px;
+}
+
+.clicker-button {
+    width: 300px; 
+    height: 300px; 
+    background-color:aqua; 
+    border: none; 
+    margin-top: 1.5em; 
+    margin-bottom: 1.5em;
+}
+
+container {
+    margin-top: 1.5em; 
+    margin-bottom: 1.5em;
+}
+
+/* button styling primarily from https://codepen.io/yourpalnurav/pen/LqNmzL */
+.custom-btn {
+    position: relative;
+    background: none;
+    color: aqua;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 0.2em solid aqua;
+    padding: 0.5em 1em;
+    margin: 1em;
+}
+
+.custom-btn::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 10%;
+    background: rgb(57, 57, 65, 0.85);
+    height: 0.3em;
+    left: 20%;
+    bottom: -0.25em;
+    transform: skewX(45deg);
+    -webkit-transition: all 0.45 cubic-bezier(0.86, 0, 0.07, 1);
+    transition: all 0.45s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.custom-btn:enabled:hover::before {
+    right: 80%;
+}
+
+.custom-btn:enabled:hover::after {
+    left: 80%;
+}
+
+.custom-btn::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 10%;
+    background: rgb(57, 57, 65, 0.85);
+    height: 0.3em;
+    right: 20%;
+    top: -0.21em;
+    transform: skewX(-45deg);
+    -webkit-transition: all 0.45s cubic-bezier(0.86, 0, 0.07, 1);
+    transition: all 0.45s cubic-bezier(0.86, 0, 0.07, 1);
+} 

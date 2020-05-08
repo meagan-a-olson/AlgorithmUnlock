@@ -25,7 +25,7 @@ export class UpgradesComponent implements OnInit {
       } else {
         this.notAvailable = true;
       }
-    }, 500);
+    }, 250);
   }
 
   onPurchase() {
