@@ -12,6 +12,7 @@ import { HardwareService } from './hardware.service';
 })
 export class AppComponent {
   title = 'AlgorithmUnlock';
+  messageToDisplay: string;
 
   // Upgrade properties
   availableUpgrades: Upgrade[] = [];
@@ -22,5 +23,20 @@ export class AppComponent {
   ngOnInit(): void {
     this.availableUpgrades = this.upgradeService.availableUpgrades;
     this.availableHardware = this.hardwareService.availableHardware;
+    setInterval(() => {
+      if (this.availableUpgrades.length == 0 && this.upgradeService.gameWon == false)
+      {
+        this.messageToDisplay = "All available upgrades purchased!";
+      }
+      else if (this.upgradeService.gameWon == true)
+      {
+        // Message based on infamous ghostbusters game completion message  (purposely spelt wrong).
+        this.messageToDisplay = "Conglaturation!!! You have completed a great game. And prooved the justice of our culture. Now go home and rest our heroes!"
+      }
+      else 
+      {
+        this.messageToDisplay = '';
+      }
+    }, 500);
   }
 }
